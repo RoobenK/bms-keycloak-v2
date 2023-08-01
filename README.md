@@ -15,7 +15,7 @@ Keycloak theme that goes along with it.
 If you are only looking to create a theme (and not a theme + an App) there are a lot of things that you can remove from this starter: [Please read this section of the README](#standalone-keycloak-theme).
 
 > ❗️ WARNING ❗️: Don't waste time trying to port this setup to [Vite](https://vitejs.dev/).  
-> Currently Keycloakify only works collocated with Webpack projects but [we are working toward enabling collocation with Vite and Next.js projects](https://github.com/keycloakify/keycloakify/pull/275)!  
+> Currently Keycloakify only works collocated with Webpack projects but [we are working toward enabling collocation with Vite and Next.js projects](https://github.com/keycloakify/keycloakify/pull/275)!
 
 # Quick start
 
@@ -28,7 +28,7 @@ yarn # install dependencies (it's like npm install)
 
 yarn storybook # Start Storybook
                # This is by far the best way to develop your theme
-               # This enable to quickly see your pages in isolation and in different states.  
+               # This enable to quickly see your pages in isolation and in different states.
                # You can create stories even for pages that you haven't explicitly overloaded. See src/keycloak-theme/login/pages/LoginResetPassword.stories.tsx
                # See Keycloakify's storybook for if you need a starting point for your stories: https://github.com/keycloakify/keycloakify/tree/main/stories
 
@@ -41,7 +41,7 @@ yarn build-keycloak-theme # Actually build the theme
                           # your theme on a real Keycloak instance.
 
 npx eject-keycloak-page # Prompt that let you select the pages you want to customize
-                        # This CLI tools is not guaranty to work, you can always copy pase pages 
+                        # This CLI tools is not guaranty to work, you can always copy pase pages
                         # from the Keycloakify repo.
 
 npx initialize-email-theme # For initializing your email theme
@@ -53,39 +53,38 @@ npx download-builtin-keycloak-theme # For downloading the default theme (as a re
 
 # The CI workflow
 
--   You need to manually allow GitHub Action to push on your repository.  For this reason the initial setup will fail.  You need to enabled permission and re-run failed job: [see video](https://user-images.githubusercontent.com/6702424/213480604-0aac0ea7-487f-491d-94ae-df245b2c7ee8.mov).  
--   This CI is configured to publish [the app](https://starter.keycloakify.dev) on [GitHub Pages](https://github.com/codegouvfr/keycloakify-starter/blob/3617a71deb1a6544c3584aa8d6d2241647abd48c/.github/workflows/ci.yaml#L51-L76) and on [DockerHub](https://github.com/codegouvfr/keycloakify-starter/blob/3617a71deb1a6544c3584aa8d6d2241647abd48c/.github/workflows/ci.yaml#L78-L123) (as a Ngnix based docker image). In practice you probably want one or the other but not both... or neither if you are just building a theme (and not a theme + an app).  
-    If you want to enable the CI to publish on DockerHub on your behalf go to repository `Settings` tab, then `Secrets` you will need to add two new secrets:
-    `DOCKERHUB_TOKEN`, you Dockerhub authorization token.  
-    `DOCKERHUB_USERNAME`, Your Dockerhub username.
-    We deploy the demo app at [starter.keycloakify.dev](https://starter.keycloakify.dev) using GitHub page on the branch `gh-pages` (you have to enable it).  
-    To configure your own domain name please refer to [this documentation](https://docs.gitlanding.dev/using-a-custom-domain-name).
--   To release **don't create a tag manually**, the CI do it for you. Just update the `package.json`'s version field and push.
--   The `.jar` files that bundle the Keycloak theme will be attached as an asset with every GitHub release. [Example](https://github.com/InseeFrLab/keycloakify-starter/releases/tag/v0.1.0). The permalink to download the latest version is: `https://github.com/USER/PROJECT/releases/latest/download/keycloak-theme.jar`.
-    For this demo repo it's [here](https://github.com/codegouvfr/keycloakify-starter/releases/latest/download/keycloak-theme.jar)
--   The CI publishes the app docker image on DockerHub. `<org>/<repo>:main` for each **commit** on `main`, `<org>/<repo>:<feature-branch-name>` for each **pull-request** on `main`
-    and when **releasing a new version**: `<org>/<repo>:latest` and `<org>/<repo>:X.Y.Z`
-    [See on DockerHub](https://hub.docker.com/r/codegouvfr/keycloakify-starter)
+- You need to manually allow GitHub Action to push on your repository. For this reason the initial setup will fail. You need to enabled permission and re-run failed job: [see video](https://user-images.githubusercontent.com/6702424/213480604-0aac0ea7-487f-491d-94ae-df245b2c7ee8.mov).
+- This CI is configured to publish [the app](https://starter.keycloakify.dev) on [GitHub Pages](https://github.com/codegouvfr/keycloakify-starter/blob/3617a71deb1a6544c3584aa8d6d2241647abd48c/.github/workflows/ci.yaml#L51-L76) and on [DockerHub](https://github.com/codegouvfr/keycloakify-starter/blob/3617a71deb1a6544c3584aa8d6d2241647abd48c/.github/workflows/ci.yaml#L78-L123) (as a Ngnix based docker image). In practice you probably want one or the other but not both... or neither if you are just building a theme (and not a theme + an app).  
+  If you want to enable the CI to publish on DockerHub on your behalf go to repository `Settings` tab, then `Secrets` you will need to add two new secrets:
+  `DOCKERHUB_TOKEN`, you Dockerhub authorization token.  
+  `DOCKERHUB_USERNAME`, Your Dockerhub username.
+  We deploy the demo app at [starter.keycloakify.dev](https://starter.keycloakify.dev) using GitHub page on the branch `gh-pages` (you have to enable it).  
+  To configure your own domain name please refer to [this documentation](https://docs.gitlanding.dev/using-a-custom-domain-name).
+- To release **don't create a tag manually**, the CI do it for you. Just update the `package.json`'s version field and push.
+- The `.jar` files that bundle the Keycloak theme will be attached as an asset with every GitHub release. [Example](https://github.com/InseeFrLab/keycloakify-starter/releases/tag/v0.1.0). The permalink to download the latest version is: `https://github.com/USER/PROJECT/releases/latest/download/keycloak-theme.jar`.
+  For this demo repo it's [here](https://github.com/codegouvfr/keycloakify-starter/releases/latest/download/keycloak-theme.jar)
+- The CI publishes the app docker image on DockerHub. `<org>/<repo>:main` for each **commit** on `main`, `<org>/<repo>:<feature-branch-name>` for each **pull-request** on `main`
+  and when **releasing a new version**: `<org>/<repo>:latest` and `<org>/<repo>:X.Y.Z`
+  [See on DockerHub](https://hub.docker.com/r/codegouvfr/keycloakify-starter)
 
-![image](https://user-images.githubusercontent.com/6702424/229296422-9d522707-114e-4282-93f7-01ca38c3a1e0.png)  
+![image](https://user-images.githubusercontent.com/6702424/229296422-9d522707-114e-4282-93f7-01ca38c3a1e0.png)
 
 ![image](https://user-images.githubusercontent.com/6702424/229296556-a69f2dc9-4653-475c-9c89-d53cf33dc05a.png)
 
-
 If you want an example of an app that put that setup in production checkout onyxia-ui: [the repo](https://github.com/InseeFrLab/onyxia-ui), [the login](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/protocol/openid-connect/auth?client_id=onyxia&redirect_uri=https%3A%2F%2Fonyxia.lab.sspcloud.fr), [the app](https://datalab.sspcloud.fr).
 
-# The storybook  
+# The storybook
 
-![image](https://user-images.githubusercontent.com/6702424/232350420-1921af90-d33e-492e-9296-0083298a84fa.png)  
+![image](https://user-images.githubusercontent.com/6702424/232350420-1921af90-d33e-492e-9296-0083298a84fa.png)
 
 ```bash
 yarn
 yarn storybook
 ```
 
-# Docker  
+# Docker
 
-Instructions for building and running the react app (`src/App`) that is collocated with our Keycloak theme. 
+Instructions for building and running the react app (`src/App`) that is collocated with our Keycloak theme.
 
 ```bash
 docker build -f Dockerfile -t keycloakify/keycloakify-starter:main .
@@ -96,8 +95,8 @@ docker run -it -dp 8083:80 keycloakify/keycloakify-starter:main
 # Standalone keycloak theme
 
 If you are only looking to create a keycloak theme, you can run theses few commands
-after clicking ![image](https://user-images.githubusercontent.com/6702424/98155461-92395e80-1ed6-11eb-93b2-98c64453043f.png) to refactor the template 
-and remove unnecessary files.  
+after clicking ![image](https://user-images.githubusercontent.com/6702424/98155461-92395e80-1ed6-11eb-93b2-98c64453043f.png) to refactor the template
+and remove unnecessary files.
 
 ```bash
 rm -r src/App
@@ -184,12 +183,12 @@ jobs:
     steps:
     - uses: garronej/ts-ci@v2.1.0
       id: step1
-      with: 
+      with:
         action_name: is_package_json_version_upgraded
 
   create_github_release:
     runs-on: ubuntu-latest
-    needs: 
+    needs:
       - check_if_version_upgraded
     # We create a release only if the version have been upgraded and we are on a default branch
     # PR on the default branch can release beta but not real release
@@ -220,4 +219,4 @@ jobs:
 EOF
 ```
 
-You can also remove `jwt-decode`, `keycloak-js`, `powerhooks` and `tsafe` from your dependencies.  
+You can also remove `jwt-decode`, `keycloak-js`, `powerhooks` and `tsafe` from your dependencies.
