@@ -79,11 +79,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: 'log
             <div className='my-4'>
               <div className='flex flex-col'>
                 <label htmlFor='username' className='text-lg text-label'>
-                  {!realm.loginWithEmailAllowed
-                    ? msg('username')
-                    : !realm.registrationEmailAsUsername
-                    ? msg('usernameOrEmail')
-                    : msg('email')}
+                    {msg('email')}
                 </label>
                 <StyledInputBase
                   id='username'
