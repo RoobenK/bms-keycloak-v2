@@ -1,15 +1,44 @@
-.my-color {
-  color: red;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+/* @font-face {
+  font-family: 'arial';
+  src: url('./fonts/arial-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.my-font {
-  font-family: 'Work Sans';
+@font-face {
+  font-family: 'arial';
+  src: url('./fonts/arial-medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: medium;
 }
 
-.my-root-class {
-  background: white;
+@font-face {
+  font-family: 'arial';
+  src: url('./fonts/arial-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+} */
+
+:focus-within {
+  outline-offset: 8px !important;
+  outline-color: #2f54eb !important;
 }
 
-.my-root-class body {
-  background: url(./assets/background.svg) no-repeat center center fixed;
+h1,
+h2 {
+  font-family: 'arial', sans-serif;
+}
+
+.background-dark-blue-gradient {
+  background: linear-gradient(18.17deg, #030852 13.09%, #131b92 100%);
+}
+
+.zsiq_floatmain {
+  display: none !important;
 }
