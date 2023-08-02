@@ -4,6 +4,7 @@ import Fallback, { type PageProps } from 'keycloakify/login'
 import type { KcContext } from './kcContext'
 import { useI18n } from './i18n'
 
+
 const Template = lazy(() => import('./Template'))
 const DefaultTemplate = lazy(() => import('keycloakify/login/Template'))
 
@@ -69,5 +70,6 @@ export default function KcApp(props: { kcContext: KcContext }) {
         }
       })()}
     </Suspense>
+      
   )
 }
