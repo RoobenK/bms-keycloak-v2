@@ -21,6 +21,7 @@ const LoginResetPassword = lazy(() => import('./pages/LoginResetPassword'))
 const LoginPageExpired = lazy(() => import('./pages/LoginPageExpired'))
 const LoginIdpLinkConfirm = lazy(() => import('./pages/LoginIdpLinkConfirm'))
 const LoginVerifyEmail = lazy(() => import('./pages/LoginVerifyEmail'))
+const LoginUpdatePassword = lazy(() => import('./pages/LoginUpdatePassword'))
 
 
 // This is like adding classes to theme.properties
@@ -75,7 +76,7 @@ export default function KcApp(props: { kcContext: KcContext }) {
           case 'login-idp-link-email.ftl':
             return "login-idp-link-email"
           case 'login-update-password.ftl':
-            return "login-update-password"
+            return <LoginUpdatePassword {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
           case 'login-page-expired.ftl':
             return <LoginPageExpired {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
           case 'register-user-profile.ftl':
