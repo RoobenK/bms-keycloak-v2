@@ -21,6 +21,7 @@ const MyExtraPage1 = lazy(() => import('./pages/MyExtraPage1'))
 const MyExtraPage2 = lazy(() => import('./pages/MyExtraPage2'))
 const Info = lazy(() => import('keycloakify/login/pages/Info'))
 const LoginResetPassword = lazy(() => import('./pages/LoginResetPassword'))
+const LoginPageExpired = lazy(() => import('./pages/LoginPageExpired'))
 
 // This is like adding classes to theme.properties
 // https://github.com/keycloak/keycloak/blob/11.0.3/themes/src/main/resources/theme/keycloak/login/theme.properties
@@ -53,6 +54,8 @@ export default function KcApp(props: { kcContext: KcContext }) {
         switch (kcContext.pageId) {
           case 'login.ftl':
             return <Login {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true} />
+          case 'login-page-expired.ftl':
+            return <LoginPageExpired {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
           case 'login-reset-password.ftl' :
             return <LoginResetPassword {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
           case 'register.ftl':
