@@ -46,6 +46,8 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
     password: '',
   })
 
+  console.log(FormValues, 'FormValues')
+
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormValues((prev) => ({
       ...prev,
