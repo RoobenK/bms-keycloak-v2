@@ -1,0 +1,69 @@
+.react-tel-input {
+  margin-top: 0.4rem !important;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  padding-top: 1.5rem !important;
+  padding-left: 4rem !important;
+  padding-bottom: 1.5rem !important;
+  border: 1px solid #ced4da !important;
+  background-color: #fcfcfb !important;
+  border-radius: 8px !important;
+  height: 1.4375em !important;
+  font-size: 16px !important;
+  margin-top: 4px !important;
+}
+
+.form-control:focus {
+  border: 2px solid #2f54eb !important;
+  box-shadow: rgba(47, 84, 235, 0.25) 0 0 0 0.2rem !important;
+}
+
+.flag-dropdown:focus {
+  border: 2px solid #2f54eb !important;
+  box-shadow: rgba(47, 84, 235, 0.25) 0 0 0 0.2rem !important;
+}
+
+.react-tel-input .selected-flag:hover {
+  background: transparent !important;
+}
+
+.react-tel-input .selected-flag:focus {
+  background: transparent !important;
+  outline-offset: 0px !important;
+  outline: 2px solid #2f54eb !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: transparent !important;
+}
+
+.react-tel-input .flag-dropdown.open {
+  background: transparent !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-radius: 8px 0 0 8px !important;
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+.react-tel-input .selected-flag {
+  border-radius: 8px 0 0 8px !important;
+}
+
+.flag-dropdown > .selected-flag {
+  width: 50px !important;
+  padding: 0 0 0 14px !important;
+}
+
+.pass_strength > div > div:nth-child(odd) {
+  height: 10px !important;
+  border-radius: 4px !important;
+}
+
+.register_terms > .MuiFormControlLabel-root {
+  display: flex !important;
+  align-items: flex-start !important;
+}
