@@ -6,12 +6,7 @@ export const { useI18n } = createUseI18n({
   // defined in the Keycloak admin UI for UserProfile
   // https://user-images.githubusercontent.com/6702424/182050652-522b6fe6-8ee5-49df-aca3-dba2d33f24a5.png
   en: {
-    alphanumericalCharsOnly: 'Only alphanumerical characters',
-    gender: 'Gender',
-    // Here we overwrite the default english value for the message "doForgotPassword"
-    // that is "Forgot Password?" see: https://github.com/InseeFrLab/keycloakify/blob/f0ae5ea908e0aa42391af323b6d5e2fd371af851/src/lib/i18n/generated_messages/18.0.1/login/en.ts#L17
-    invalidUserMessage: 'Invalid username or password. (this message was overwrite in the theme)',
-    // login page en
+  // login page en
   loginAccountTitle: 'Welcome back',
   createAccount: 'You don&#39;t have any Boostmyshop account yet?',
   createNow: 'Create now',
@@ -99,12 +94,7 @@ export const { useI18n } = createUseI18n({
     'Final step to your free trial. Activate your Boostmyshop account by following the instructions sent to your registered email address.',
   },
   fr: {
-    /* spell-checker: disable */
-    alphanumericalCharsOnly: 'Caractère alphanumérique uniquement',
-    gender: 'Genre',
-    invalidUserMessage: "Nom d'utilisateur ou mot de passe invalide. (ce message a été écrasé dans le thème)",
-    /* spell-checker: enable */
-     // login page fr
+  // login page fr
   loginAccountTitle: 'Bienvenue de retour',
   createAccount: 'Vous n&#x27;avez pas encore de compte Boostmyshop ?',
   createNow: 'Créer maintenant',
@@ -191,6 +181,186 @@ export const { useI18n } = createUseI18n({
   verifyEmailInstruction:
     'Dernière étape pour votre essai gratuit. Activez votre compte Boostmyshop en suivant les instructions envoyées à votre adresse e-mail enregistrée.',
   },
+  es: {
+// login page es
+loginAccountTitle: 'Bienvenido de nuevo',
+createAccount: '¿Aún no tienes una cuenta de Boostmyshop?',
+createNow: 'Crea una ahora',
+loginKeypointsTitle1: 'Sé el maestro de los marketplaces.',
+loginKeypointsTitle2: 'Haz crecer tu negocio en línea más rápido.',
+loginKeypointsTitle3: 'Vende de forma más inteligente en línea.',
+loginKeypoint1: 'Monitoreo de precios de competidores',
+loginKeypoint2: 'Indicador de salud del catálogo',
+loginKeypoint3: 'Predictor de Buy Box',
+loginKeypoint4: 'Precios dinámicos',
+loginKeypoint5: 'Tablero inteligente',
+loginTitleHightlighted1: 'Sé el maestro',
+loginTitleNormal1: 'del mercado',
+loginTitleHightlighted2: 'Haz crecer más rápido',
+loginTitleNormal2: 'tu negocio en línea',
+loginTitleHightlighted3: 'Vende de manera más inteligente',
+loginTitleNormal3: 'en línea',
+
+// register page1 es
+registerAccountTitle: 'Comienza',
+registerAccountSubTitle: 'Comienza tu prueba gratuita en myPricing hoy',
+registerLetStart: 'Continuar',
+
+// register page2 es
+registerPage2Title: 'Regístrate para tu prueba gratuita',
+registerPage2SubTitle: 'Completa tu perfil',
+registerFirstName: 'Nombre',
+registerLastName: 'Apellido',
+registerCompany: 'Empresa',
+registerPhoneNumber: 'Número de teléfono',
+registerPassword: 'Contraseña',
+registerGoBack: 'Regresa',
+registerCreateAccount: 'Comenzar',
+registerTerms1: 'Al continuar, aceptas nuestros',
+registerTerms2: 'Términos de servicio',
+registerTerms3: 'y nuestra ',
+registerTerms4: 'Política de privacidad.',
+registerTerms5:
+  'Procesaremos tus datos para crear tu cuenta de usuario. Si no deseas recibir nuestras noticias y otra información útil, comunícate con nuestro servicio de atención al cliente.',
+registerKeypointsTitle: 'Mejora el rendimiento de tus ventas en todos los marketplaces',
+registerKeypoint1: 'Prueba Boostmyshop myPricing gratis durante 15 días',
+registerKeypoint2:
+  'Conéctate a tus marketplaces, importa tu catálogo de productos y analiza el rendimiento de tus marketplaces en un solo clic',
+registerKeypoint3: 'Servicio al cliente experto',
+
+// page expired es
+pageExpiredTitle: 'Página expirada',
+pageExpiredSubTitle: 'Por favor, elija una acción para proceder',
+
+//reset password es
+resetPasswordTitle: 'Restablecer la contraseña',
+
+// update password es
+updatePasswordTitle: 'Actualizar la contraseña',
+
+// keypoints es
+keypointsHeader: 'Aumente sus ventas en las marketplaces con',
+keypointsText1: 'Monitoreo de precios de la competencia',
+keypointsText2: 'Indicador de salud del catálogo',
+keypointsText3: 'Predictor de Buy Box',
+keypointsText4: 'Precios dinámicos',
+keypointsText5: 'Panel de control inteligente',
+
+// password strength es
+tooShort: 'Fortaleza de la contraseña: Demasiado débil',
+weak: 'Fortaleza de la contraseña: Débil',
+okay: 'Fortaleza de la contraseña: Aceptable',
+good: 'Fortaleza de la contraseña: Buena',
+strong: 'Fortaleza de la contraseña: Fuerte',
+
+// words es
+poweredBy: 'Proporcionado por',
+language: 'Idioma',
+newPassword: 'Nueva contraseña',
+confirmPassword: 'Confirmar contraseña',
+BacktoLogin: 'Volver a iniciar sesión',
+or: 'o',
+email: 'Dirección de correo electrónico',
+signInWithGoogle: 'Iniciar sesión con Google',
+signInWithDarty: 'Iniciar sesión con Darty',
+freeTrial: 'prueba gratuita',
+alreadyHaveAccount: '¿Ya tiene una cuenta?',
+welcome: '¡Bienvenido! Comencemos nuestro viaje.',
+verifyEmailInstruction:
+  'Último paso para su prueba gratuita. Active su cuenta de Boostmyshop siguiendo las instrucciones enviadas a su dirección de correo electrónico registrada.',
+
+  },
+
+
+
+  it: {
+     // login page it
+  loginAccountTitle: 'Benvenuto di nuovo',
+  createAccount: 'Non hai ancora un account Boostmyshop?',
+  createNow: 'Crea ora',
+  loginKeypointsTitle1: 'Diventa il padrone delle marketplaces.',
+  loginKeypointsTitle2: 'Fai crescere il tuo e-commerce più velocemente.',
+  loginKeypointsTitle3: 'Vendi in modo più intelligente online.',
+  loginKeypoint1: 'Monitoraggio dei prezzi della concorrenza',
+  loginKeypoint2: 'Indicatore di salute del catalogo',
+  loginKeypoint3: 'Predictor di Buy Box',
+  loginKeypoint4: 'Prezzi dinamici',
+  loginKeypoint5: 'Pannello di controllo intelligente',
+  loginTitleHightlighted1: 'Diventa il padrone',
+  loginTitleNormal1: 'del mercato',
+  loginTitleHightlighted2: 'Cresci più velocemente',
+  loginTitleNormal2: 'il tuo e-business',
+  loginTitleHightlighted3: 'Vendi in modo più intelligente',
+  loginTitleNormal3: 'online',
+
+  // register page1 it
+  registerAccountTitle: 'Iniziamo',
+  registerAccountSubTitle: 'Registrati per il tuo periodo di prova gratuito',
+  registerLetStart: 'Continua',
+
+  // register page2 it
+  registerPage2Title: 'Registrati per il tuo periodo di prova gratuito',
+  registerPage2SubTitle: 'Completa il tuo profilo',
+  registerFirstName: 'Nome',
+  registerLastName: 'Cognome',
+  registerCompany: 'Azienda',
+  registerPhoneNumber: 'Numero di telefono',
+  registerPassword: 'Crea una password',
+  registerGoBack: 'Indietro',
+  registerCreateAccount: 'Inizia',
+  registerTerms1: 'Selezionando questa casella accetti i nostri ',
+  registerTerms2: 'Termini di servizio ',
+  registerTerms3: 'e la nostra ',
+  registerTerms4: 'Informativa sulla privacy.',
+  registerTerms5:
+    'I tuoi dati saranno elaborati per creare il tuo account utente. Se non desideri ricevere le nostre notizie e altre informazioni utili, contatta il nostro servizio clienti.',
+  registerKeypointsTitle: 'Aumenta le prestazioni delle tue vendite su tutte le marketplaces',
+  registerKeypoint1: 'Prova Boostmyshop myPricing gratuitamente per 15 giorni',
+  registerKeypoint2:
+    'Collegati alle tue marketplaces, importa il tuo catalogo prodotti e analizza le tue prestazioni sulle marketplaces con un solo clic',
+  registerKeypoint3: 'Assistenza clienti esperta',
+
+  // page expired it
+  pageExpiredTitle: 'Pagina scaduta',
+  pageExpiredSubTitle: "Seleziona un'azione per procedere",
+
+  //reset password it
+  resetPasswordTitle: 'Reimposta la password',
+
+  // update password it
+  updatePasswordTitle: 'Aggiorna la password',
+
+  // keypoints it
+  keypointsHeader: 'Aumenta le tue vendite sulle marketplaces con',
+  keypointsText1: 'Monitoraggio dei prezzi della concorrenza',
+  keypointsText2: 'Indicatore di salute del catalogo',
+  keypointsText3: 'Predictor di Buy Box',
+  keypointsText4: 'Prezzi dinamici',
+  keypointsText5: 'Pannello di controllo intelligente',
+
+  // password strength it
+  tooShort: 'Forza della password: Troppo debole',
+  weak: 'Forza della password: Debole',
+  okay: 'Forza della password: Accettabile',
+  good: 'Forza della password: Buona',
+  strong: 'Forza della password: Forte',
+
+  // words it
+  poweredBy: 'Offerto da',
+  language: 'Lingua',
+  newPassword: 'Nuova password',
+  confirmPassword: 'Conferma password',
+  BacktoLogin: 'Torna al login',
+  or: 'oppure',
+  email: 'Indirizzo email',
+  signInWithGoogle: 'Accedi con Google',
+  signInWithDarty: 'Accedi con Darty',
+  freeTrial: 'periodo di prova gratuito',
+  alreadyHaveAccount: 'Hai già un account?',
+  welcome: 'Benvenuto! Iniziamo il nostro viaggio.',
+  verifyEmailInstruction:
+    'Ultimo passo per il tuo periodo di prova gratuito. Attiva il tuo account Boostmyshop seguendo le istruzioni inviate al tuo indirizzo email registrato.',
+  }
 })
 
 export type I18n = NonNullable<ReturnType<typeof useI18n>>
