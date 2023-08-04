@@ -4,7 +4,7 @@ import type { PageProps } from 'keycloakify/login/pages/PageProps'
 import { useGetClassName } from 'keycloakify/login/lib/useGetClassName'
 import type { KcContext } from '../kcContext'
 import type { I18n } from '../i18n'
-import { useState, FormEvent, useEffect, useContext, memo } from 'react'
+import { useState, FormEvent, useEffect, ChangeEvent, memo } from 'react'
 import Layout from '../components/common/Layout'
 import { useConstCallback } from 'powerhooks'
 import { getStatus, WARNING } from '../../utils/status'
@@ -20,6 +20,10 @@ import { StyledInputBase, StyledPrimaryLoginButton } from 'styles/BasicStyles'
 import PasswordStrengthBar from 'react-password-strength-bar'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 
+interface IPhoneNumber {
+  phoneNumber: string
+}
+
 export default function Register(props: PageProps<Extract<KcContext, { pageId: 'register.ftl' }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props
 
@@ -33,7 +37,28 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
 
   const { msg, msgStr } = i18n
 
-  const { handleChangePhoneNumber, onChange, FormValues } = useContext(RegisterContext)
+  const [FormValues, setFormValues] = useState({
+    email: '',
+    firstName: '',
+    lastName: '',
+    company: '',
+    phone: '',
+    password: '',
+  })
+
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormValues((prev) => ({
+      ...prev,
+      [e.target.id === 'password-confirm' ? 'passwordConfirm' : e.target.id]: e.target.value,
+    }))
+  }
+
+  const handleChangePhoneNumber = ({ phoneNumber }: IPhoneNumber) => {
+    setFormValues((prev) => ({
+      ...prev,
+      phone: phoneNumber,
+    }))
+  }
 
   const [showPassword, setShowPassword] = useState(false)
   // const [isPhoneValid, setPhoneValid] = useState(false)
