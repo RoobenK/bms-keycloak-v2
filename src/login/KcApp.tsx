@@ -22,7 +22,7 @@ const LoginPageExpired = lazy(() => import('./pages/LoginPageExpired'))
 const LoginIdpLinkConfirm = lazy(() => import('./pages/LoginIdpLinkConfirm'))
 const LoginVerifyEmail = lazy(() => import('./pages/LoginVerifyEmail'))
 const LoginUpdatePassword = lazy(() => import('./pages/LoginUpdatePassword'))
-
+const LoginUpdateProfile = lazy(() => import('./pages/LoginUpdateProfile'))
 
 // This is like adding classes to theme.properties
 // https://github.com/keycloak/keycloak/blob/11.0.3/themes/src/main/resources/theme/keycloak/login/theme.properties
@@ -70,11 +70,9 @@ export default function KcApp(props: { kcContext: KcContext }) {
           case 'login-otp.ftl':
             return "login-otp"
           case 'login-update-profile.ftl':
-            return "login-update-profile"
+            return <LoginUpdateProfile {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
           case "login-idp-link-confirm.ftl": 
             return <LoginIdpLinkConfirm {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
-          case 'login-idp-link-email.ftl':
-            return "login-idp-link-email"
           case 'login-update-password.ftl':
             return <LoginUpdatePassword {...{ kcContext, i18n, Template, classes }} doUseDefaultCss={true}/>
           case 'login-page-expired.ftl':
