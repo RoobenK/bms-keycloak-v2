@@ -1,5 +1,5 @@
-const RegisterKeypoints = ({i18n}) => {
-    const {msg, currentLanguageTag} = i18n
+const RegisterKeypoints = ({ i18n }) => {
+  const { msg, currentLanguageTag } = i18n
 
   const isEnglishLangSelected = currentLanguageTag === 'en'
 

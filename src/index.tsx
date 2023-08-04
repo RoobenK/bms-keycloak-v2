@@ -12,8 +12,12 @@ createRoot(document.getElementById('root')!).render(
     <Suspense>
       {(() => {
         if (kcLoginThemeContext !== undefined) {
-          return  <ThemeProvider theme={theme}>
-          <CssBaseline /><KcLoginThemeApp kcContext={kcLoginThemeContext} /></ThemeProvider>
+          return (
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <KcLoginThemeApp kcContext={kcLoginThemeContext} />
+            </ThemeProvider>
+          )
         }
 
         throw new Error('This app is a Keycloak theme' + "It isn't meant to be deployed outside of Keycloak")

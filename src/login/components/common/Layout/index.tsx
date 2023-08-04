@@ -10,7 +10,7 @@ export type LayoutProps = {
   LoginContent?: ReactNode
   tryAnotherWayNode?: ReactNode
   layout?: 'login' | 'register'
-  i18n:any
+  i18n: any
 }
 
 const Layout = ({
@@ -21,7 +21,7 @@ const Layout = ({
   LoginContent,
   tryAnotherWayNode,
   layout = 'register',
-  i18n
+  i18n,
 }: LayoutProps) => {
   const { msg } = i18n
 
@@ -31,7 +31,7 @@ const Layout = ({
         <div className='grid min-h-screen grid-cols-12'>
           <div className='relative col-span-12 flex h-full flex-col items-center justify-center bg-grey-2 bg-[url("https://ik.imagekit.io/4aodhblzt6h/gray-abstract-bg_uExjJhsNns.svg?updatedAt=1681135513569")] bg-cover bg-no-repeat p-4 lg:col-span-6 lg:p-8'>
             <div className='md:absolute md:right-8 md:top-8'>
-              <Header i18n={i18n}/>
+              <Header i18n={i18n} />
             </div>
 
             <div className='z-10 mx-auto mt-8 flex w-full max-w-xl flex-col justify-center rounded-lg border border-grey-3 bg-white p-8 font-poppins md:mt-24'>
@@ -66,7 +66,7 @@ const Layout = ({
       return (
         <div className='grid min-h-screen grid-cols-12'>
           <div className='relative col-span-12 flex h-full flex-col bg-grey-2 bg-[url("https://ik.imagekit.io/4aodhblzt6h/gray-abstract-bg_uExjJhsNns.svg?updatedAt=1681135513569")] bg-cover bg-no-repeat p-4 lg:col-span-8 lg:p-8'>
-            <Header i18n={i18n}/>
+            <Header i18n={i18n} />
 
             <div className='z-10 mx-auto mt-8 flex w-full max-w-xl flex-col justify-center rounded-lg border border-grey-3 bg-white p-8 font-poppins'>
               {MessageNode}

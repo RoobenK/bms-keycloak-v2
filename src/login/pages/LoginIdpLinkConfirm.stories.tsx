@@ -8,8 +8,8 @@ const { PageStory } = createPageStory({
 })
 
 export default {
- title: 'login/LoginIdpLinkConfirm',
+  title: 'login/LoginIdpLinkConfirm',
   component: PageStory,
-} as ComponentMeta<typeof PageStory> 
+} as ComponentMeta<typeof PageStory>
 
 export const Default: ComponentStory<typeof PageStory> = () => <PageStory />

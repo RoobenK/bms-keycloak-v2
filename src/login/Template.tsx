@@ -34,9 +34,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
   const { isReady } = usePrepareTemplate({
     doFetchDefaultThemeResources: doUseDefaultCss,
     url,
-    stylesCommon: [
-
-    ],
+    stylesCommon: [],
     styles: [],
     htmlClassName: getClassName('kcHtmlClass'),
     bodyClassName: undefined,
@@ -67,11 +65,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
   //       </div>
   //     </div>
   //   </div>
-  // )} 
+  // )}
 
-  return (
-     <div>
-        {children}
-    </div>
-  )
+  return <div>{children}</div>
 }

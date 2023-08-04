@@ -1,6 +1,5 @@
-const LoginLeftNode = ({i18n}) => {
-
-  const {msg, currentLanguageTag} = i18n
+const LoginLeftNode = ({ i18n }) => {
+  const { msg, currentLanguageTag } = i18n
 
   const isEnglishLangSelected = currentLanguageTag === 'en'
 

@@ -13,10 +13,12 @@ import { getStatus, WARNING } from '../../utils/status'
 import { Typography, Alert, FormControlLabel, Box, Link, Checkbox } from '@mui/material'
 import { StyledInputBase, StyledPrimaryLoginButton } from '../../styles/BasicStyles'
 import { SocialLoginButton } from '../components/common/SocialLoginButton'
-import LoginLeftNode from "../components/Login/LoginLeftNode"
+import LoginLeftNode from '../components/Login/LoginLeftNode'
 import Layout from 'login/components/common/Layout'
 
-export default function LoginResetPassword(props: PageProps<Extract<KcContext, { pageId: 'login-idp-link-confirm.ftl' }>, I18n>) {
+export default function LoginResetPassword(
+  props: PageProps<Extract<KcContext, { pageId: 'login-idp-link-confirm.ftl' }>, I18n>,
+) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props
 
   const { getClassName } = useGetClassName({
@@ -26,27 +28,24 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
 
   const { msg, msgStr } = i18n
 
-  const { url,idpAlias } = kcContext
+  const { url, idpAlias } = kcContext
 
-
-   return(
-  <Template
-  {...{ kcContext, i18n, doUseDefaultCss, classes }}
-  headerNode={msg('emailForgotTitle')}
->
- <Layout
- i18n={i18n}
- title={<>{msg('confirmLinkIdpTitle')}</>}
- formContentNode={
-   <div className='mt-4 flex flex-col gap-8  md:flex-row'>
-     <a
-       href={url.loginUrl}
-       className='flex flex-col items-center gap-4 rounded-lg border border-grey-3 px-4 py-2 text-base shadow hover:border-grey-4 focus:ring-2 focus:ring-geekBlue-6 focus:ring-offset-2 active:bg-grey-2'
-     >
-       {msg('confirmLinkIdpContinue', idpAlias)}
-     </a>
-   </div>
- }
-    />
-</Template>)
+  return (
+    <Template {...{ kcContext, i18n, doUseDefaultCss, classes }} headerNode={msg('emailForgotTitle')}>
+      <Layout
+        i18n={i18n}
+        title={<>{msg('confirmLinkIdpTitle')}</>}
+        formContentNode={
+          <div className='mt-4 flex flex-col gap-8  md:flex-row'>
+            <a
+              href={url.loginUrl}
+              className='flex flex-col items-center gap-4 rounded-lg border border-grey-3 px-4 py-2 text-base shadow hover:border-grey-4 focus:ring-2 focus:ring-geekBlue-6 focus:ring-offset-2 active:bg-grey-2'
+            >
+              {msg('confirmLinkIdpContinue', idpAlias)}
+            </a>
+          </div>
+        }
+      />
+    </Template>
+  )
 }

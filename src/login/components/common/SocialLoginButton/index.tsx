@@ -1,4 +1,3 @@
-
 export type ProviderProps = {
   loginUrl: string
   alias?: string
@@ -6,7 +5,7 @@ export type ProviderProps = {
   displayName?: string
 }
 
-export const SocialLoginButton = ({ provider, i18n }: { provider: ProviderProps ;i18n:any}) => {
+export const SocialLoginButton = ({ provider, i18n }: { provider: ProviderProps; i18n: any }) => {
   const { msg } = i18n
 
   const { loginUrl, alias } = provider

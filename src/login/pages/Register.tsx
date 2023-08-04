@@ -9,8 +9,8 @@ import Layout from '../components/common/Layout'
 import { useConstCallback } from 'powerhooks'
 import { getStatus, WARNING } from '../../utils/status'
 import { getGeoLocation } from '../../utils/GetGeoLocation'
-import "../components/Register/RegisterForm.css"
-import RegisterContext from "../components/Register/context/RegisterContext"
+import '../components/Register/RegisterForm.css'
+import RegisterContext from '../components/Register/context/RegisterContext'
 
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -28,7 +28,8 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
     classes,
   })
 
-  const { url, messagesPerField, register, realm, passwordRequired, recaptchaRequired, recaptchaSiteKey, social } = kcContext
+  const { url, messagesPerField, register, realm, passwordRequired, recaptchaRequired, recaptchaSiteKey, social } =
+    kcContext
 
   const { msg, msgStr } = i18n
 
@@ -75,8 +76,8 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
 
   return (
     <Template {...{ kcContext, i18n, doUseDefaultCss, classes }} headerNode={msg('registerTitle')}>
-    <Layout
-       i18n={i18n}
+      <Layout
+        i18n={i18n}
         title={msg('registerAccountSubTitle')}
         MessageNode={
           <>

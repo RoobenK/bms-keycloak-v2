@@ -7,7 +7,7 @@ import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 
 interface IHeader {
   logoWhite?: boolean
-  i18n?:any
+  i18n?: any
 }
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -41,11 +41,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 }))
 
 const Header = memo(({ logoWhite = false, i18n }: IHeader) => {
-//   const { kcContext } = getKcContext({})
-//   const { msg } = useKcMessage()
+  //   const { kcContext } = getKcContext({})
+  //   const { msg } = useKcMessage()
 
-//   const { kcLanguageTag, setKcLanguageTag } = useKcLanguageTag()
-//   const url = kcContext?.url
+  //   const { kcLanguageTag, setKcLanguageTag } = useKcLanguageTag()
+  //   const url = kcContext?.url
 
   const enabledLanguage = [
     {
@@ -66,8 +66,7 @@ const Header = memo(({ logoWhite = false, i18n }: IHeader) => {
     },
   ]
 
-const { msg , changeLocale, labelBySupportedLanguageTag, currentLanguageTag} = i18n
-
+  const { msg, changeLocale, labelBySupportedLanguageTag, currentLanguageTag } = i18n
 
   const BootstrapInput = styled(InputBase)(({ theme }) => ({
     '& .MuiSelect-icon': {
@@ -129,10 +128,6 @@ const { msg , changeLocale, labelBySupportedLanguageTag, currentLanguageTag} = i
           {/* <GlobeIcon /> */}
         </div>
 
-      
-  
-
-        
         <FormControl>
           <Select
             value={currentLanguageTag}
