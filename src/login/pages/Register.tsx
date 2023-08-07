@@ -183,23 +183,6 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
                       {msg('registerPhoneNumber')}
                       <span className='text-geekBlue-6'>*</span>
                     </label>
-                    {/* <PhoneInput
-                      inputProps={{
-                        required: true,
-                        name: 'user.attributes.phone',
-                        id: 'phone',
-                      }}
-                      onChange={(value, country, e, formattedValue) => {
-                        const formattedPhone = `+${value}`
-                        handleChangePhoneNumber({ phoneNumber: formattedPhone })
-                      }}
-                      enableSearch
-                      disableSearchIcon
-                      preferredCountries={['fr', 'it', 'es', 'us', 'uk']}
-                      country={geoCoutry.toLowerCase() || 'fr'}
-                      // @ts-ignore
-                      defaultValue={register.formData['user.attributes.phone'] ?? ''}
-                    /> */}
 
                     <PhoneNumber
                       handleChangePhoneNumber={handleChangePhoneNumber}
