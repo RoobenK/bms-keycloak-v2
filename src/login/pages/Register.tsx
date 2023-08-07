@@ -8,17 +8,13 @@ import { useState, FormEvent, useEffect, ChangeEvent, memo } from 'react'
 import Layout from '../components/common/Layout'
 import { useConstCallback } from 'powerhooks'
 import { getStatus, WARNING } from '../../utils/status'
-import { getGeoLocation } from '../../utils/GetGeoLocation'
 import '../components/Register/RegisterForm.css'
-import RegisterContext from '../components/Register/context/RegisterContext'
-
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
 import { Alert, Box, Checkbox, FormControlLabel, IconButton, Typography } from '@mui/material'
 import { SocialLoginButton } from 'login/components/common/SocialLoginButton'
 import { StyledInputBase, StyledPrimaryLoginButton } from 'styles/BasicStyles'
 import PasswordStrengthBar from 'react-password-strength-bar'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
+import PhoneNumber from 'login/components/Register/PhoneNumber'
 
 interface IPhoneNumber {
   phoneNumber: string
@@ -89,17 +85,6 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
 
     return true
   })
-
-  const [geoCoutry, setGeoCountry] = useState('')
-
-  useEffect(() => {
-    fetchGeoLocation()
-  }, [])
-
-  const fetchGeoLocation = async () => {
-    const country = await getGeoLocation()
-    setGeoCountry(country)
-  }
 
   return (
     <Template {...{ kcContext, i18n, doUseDefaultCss, classes }} headerNode={msg('registerTitle')}>
@@ -198,7 +183,7 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
                       {msg('registerPhoneNumber')}
                       <span className='text-geekBlue-6'>*</span>
                     </label>
-                    <PhoneInput
+                    {/* <PhoneInput
                       inputProps={{
                         required: true,
                         name: 'user.attributes.phone',
@@ -214,6 +199,11 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
                       country={geoCoutry.toLowerCase() || 'fr'}
                       // @ts-ignore
                       defaultValue={register.formData['user.attributes.phone'] ?? ''}
+                    /> */}
+
+                    <PhoneNumber
+                      handleChangePhoneNumber={handleChangePhoneNumber}
+                      defaultValue={register.formData['user.attributes.phone']}
                     />
                   </div>
                 </div>
@@ -251,6 +241,7 @@ export default function Register(props: PageProps<Extract<KcContext, { pageId: '
                       defaultValue={FormValues?.password ?? ''}
                       onChange={onChange}
                       fullWidth
+                      value={FormValues?.password}
                       margin='dense'
                       required
                       type={showPassword ? 'text' : 'password'}
