@@ -36,12 +36,10 @@ export default function Error(props: PageProps<Extract<KcContext, { pageId: 'err
         subtitle={message.summary}
         formContentNode={
           <div className='mt-8'>
-            {client.baseUrl !== undefined && (
               <StyledPrimaryLoginButton href={client.baseUrl} fullWidth variant='contained' disableRipple>
                 {/* @ts-ignore */}
                 {msg('backToApplication')}
               </StyledPrimaryLoginButton>
-            )}
           </div>
         }
       />
